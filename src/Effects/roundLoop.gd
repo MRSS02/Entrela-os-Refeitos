@@ -23,10 +23,11 @@ func _on_Area2D_body_entered(body: Node) -> void:
 		var other = get_node(other_tilemap)
 		var this_car = get_node(car)
 		other.position.x = self.position.x + 2048
-		if player.position.x <= stage.distance * 0.95:  
+		if player.position.x <= stage.distance * 0.9:
 			if is_instance_valid(this_car):
 				this_car.position.x = player.position.x + car_pos
 				this_car.position.y = 510
+		if player.position.x <= stage.distance * 0.95:  
 			var this_stud0 = get_node(student0)
 			var this_stud1 = get_node(student1)
 			var this_stud2 = get_node(student2) 
