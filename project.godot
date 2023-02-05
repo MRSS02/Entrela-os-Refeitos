@@ -14,31 +14,62 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Characters/Actor.gd"
 }, {
+"base": "ScrollLevel",
+"class": "Afternoon_Scene",
+"language": "GDScript",
+"path": "res://src/Levels/Afternoon.gd"
+}, {
 "base": "Actor",
 "class": "Car",
 "language": "GDScript",
 "path": "res://src/Characters/Car.gd"
 }, {
+"base": "ScrollLevel",
+"class": "Morning_Scene",
+"language": "GDScript",
+"path": "res://src/Levels/Morning.gd"
+}, {
 "base": "Actor",
 "class": "Player",
 "language": "GDScript",
 "path": "res://src/Characters/Player.gd"
+}, {
+"base": "Node2D",
+"class": "ScrollLevel",
+"language": "GDScript",
+"path": "res://ScrollLevel.gd"
+}, {
+"base": "Actor",
+"class": "Student",
+"language": "GDScript",
+"path": "res://src/Characters/student.gd"
+}, {
+"base": "Actor",
+"class": "paper_plane",
+"language": "GDScript",
+"path": "res://src/Characters/Paper Plane.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Afternoon_Scene": "",
 "Car": "",
-"Player": ""
+"Morning_Scene": "",
+"Player": "",
+"ScrollLevel": "",
+"Student": "",
+"paper_plane": ""
 }
 
 [application]
 
 config/name="Entrelaços Refeitos"
-run/main_scene="res://src/Levels/Afternoon.tscn"
+run/main_scene="res://src/Levels/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 MusicController="*res://src/Autoload/MusicController.tscn"
+Friendship="*res://src/Autoload/Friendship.gd"
 
 [gui]
 

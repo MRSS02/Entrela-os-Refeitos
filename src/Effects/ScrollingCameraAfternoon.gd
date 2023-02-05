@@ -1,6 +1,6 @@
 extends Camera2D
 
-onready var player = get_node("/root/Afternoon/Player")
+onready var player = get_node("/root/Scene/Player")
 var greater_position = 512
  
 # Declare member variables here. Examples:

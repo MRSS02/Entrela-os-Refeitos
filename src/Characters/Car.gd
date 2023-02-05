@@ -1,8 +1,8 @@
 extends Actor
 class_name Car
 
-onready var player = get_node("/root/Afternoon/Player")
-onready var camera = get_node("/root/Afternoon/Camera2D")
+onready var player = get_node("/root/Scene/Player")
+onready var camera = get_node("/root/Scene/Camera2D")
 
 export var running_speed = -100
 
@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	rng.randomize()
 	velocity.y += gravity * delta
 	velocity.y = min(velocity.y, maxspeed.y)
-	velocity.x = rng.randf_range(-250, -80)
+	velocity.x = rng.randf_range(-450, -80)
 	velocity = move_and_slide(velocity, UP)
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
