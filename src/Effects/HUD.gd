@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 		var time =  get_node(stage).get("timer") / 60
 		var distance = get_node(stage).get("distance")
-		var proximity = str(int(player.position.x / distance * 100))
+		var proximity = str(int(player.position.x / distance * 100) + 1)
 		var friendship = str(int(float(Friendship.friendship)/ 4 * 100))
 		print(friendship)
 		proximity += "%" 

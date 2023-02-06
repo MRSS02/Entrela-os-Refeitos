@@ -6,6 +6,9 @@ func _ready():
 
 func _process(delta) -> void:
 	
+	if player.position.y > 515:
+		player.position.y = 515
+		player.position.x += 800
 	if self.timer == 0 or player.position.x >= self.distance * 0.99:
 		if player.position.x >= self.distance * 0.99:
 			Friendship.increase()
