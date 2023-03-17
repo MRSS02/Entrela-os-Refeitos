@@ -1,4 +1,7 @@
- Programmers: [MRSS02](https://github.com/MRSS02), Edemon
- Sound / Music Designers: Lil Gabi
- Art designers: nana_oliver
+ Programmers: [MRSS02](https://github.com/MRSS02), special thanks to Rodrigo Rocha
+ 
+Sound / Music Designer: Gabriela Augusta 
+
+
+Art Designer: Gabriela Augusta, special thanks to Emerson
 
