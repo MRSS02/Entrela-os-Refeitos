@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/entrelacos_refeitos_musica_2.mp3-ac5e68da0062d796c92d2d450a096a98.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/entrelacos_refeitos_musica_2.mp3"
+dest_files=[ "res://.import/entrelacos_refeitos_musica_2.mp3-ac5e68da0062d796c92d2d450a096a98.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

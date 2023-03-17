@@ -1,0 +1,159 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Levels/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/sprites/nuvens_frente.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/nuvens_tras.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/céu.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/prédios.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/CloudsScroll.gd" type="Script" id=9]
+[ext_resource path="res://assets/sprites/predios.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 4
+outline_color = Color( 0.576471, 0.470588, 0.470588, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 2
+outline_color = Color( 0.576471, 0.470588, 0.470588, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[node name="Scene" type="Node2D"]
+rotation = -0.00264473
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 1, 0 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 1080, 0 )
+script = ExtResource( 9 )
+move_speed = -20.0
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 511.5, 319.5 )
+scale = Vector2( 0.70511, 0.905367 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1080, 0 )
+script = ExtResource( 9 )
+move_speed = -10.0
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 511.5, 316.5 )
+scale = Vector2( 0.70511, 0.905367 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1080, 0 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 511.5, 275 )
+scale = Vector2( 0.70511, 0.905367 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.75, 1 )
+motion_mirroring = Vector2( 1080, 0 )
+script = ExtResource( 9 )
+move_speed = -30.0
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 511.5, 319.5 )
+scale = Vector2( 0.70511, 0.905367 )
+texture = ExtResource( 4 )
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -101
+
+[node name="Sprite" type="Sprite" parent="Background"]
+position = Vector2( 511.5, 319.5 )
+scale = Vector2( 0.70511, 0.905367 )
+texture = ExtResource( 7 )
+
+[node name="Menu0" type="CanvasLayer" parent="."]
+offset = Vector2( 75, 40 )
+transform = Transform2D( 1, 0, 0, 1, 75, 40 )
+
+[node name="Label" type="Label" parent="Menu0"]
+margin_left = 23.0
+margin_right = 839.0
+margin_bottom = 99.0
+rect_rotation = -0.0630624
+theme = SubResource( 2 )
+text = "Remade Innerbonds
+"
+align = 1
+valign = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 511, 238 )
+current = true
+
+[node name="Menu1" type="CanvasLayer" parent="."]
+offset = Vector2( 75, 460 )
+transform = Transform2D( 1, 0, 0, 1, 75, 460 )
+
+[node name="Label" type="Label" parent="Menu1"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_rotation = -0.0700669
+theme = SubResource( 4 )
+text = "Prorammed by M. Romano
+Art and Music by Gabriela
+Special thanks to Rodrigo
+Rocha and Emerson
+"
+valign = 1
+
+[node name="Menu2" type="CanvasLayer" parent="."]
+offset = Vector2( 100, 280 )
+transform = Transform2D( 1, 0, 0, 1, 100, 280 )
+
+[node name="Label" type="Label" parent="Menu2"]
+margin_left = 84.0
+margin_right = 692.0
+margin_bottom = 67.0
+rect_rotation = -0.0700669
+theme = SubResource( 4 )
+text = "PRESS ENTER TO PLAY
+"
+valign = 1
+
+[node name="História" type="CanvasLayer" parent="."]
+visible = false
+offset = Vector2( 50, 120 )
+transform = Transform2D( 1, 0, 0, 1, 50, 120 )
+
+[node name="Label" type="Label" parent="História"]
+margin_left = 6.0
+margin_top = -29.0
+margin_right = 1030.0
+margin_bottom = 318.0
+rect_rotation = -0.0700669
+theme = SubResource( 4 )
+text = "It's been years since you've 
+last talked with the one who 
+used to be your best friend.
+But you still study in the 
+same school. So can you meet 
+each other again, remake the 
+bonds and return to your 
+roots? Why not go find him?
+
+"
+valign = 1

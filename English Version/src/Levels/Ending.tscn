@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Font/new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/sprites/main_character.png" type="Texture" id=2]
+[ext_resource path="res://src/Characters/Friend.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Levels/Ending.gd" type="Script" id=4]
+[ext_resource path="res://assets/sprites/FinalScene.png" type="Texture" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2( 513, 299 )
+scale = Vector2( 0.748902, 0.783854 )
+texture = ExtResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+
+[node name="Friend" parent="." instance=ExtResource( 3 )]
+position = Vector2( 678, 444 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 3024.0
+margin_bottom = 331.0
+theme = ExtResource( 1 )
+text = "The friends met each 
+other again!!!!
+
+Finally, they can reenable 
+their relationships
+and strengthen 
+their bonds 
+after so 
+much time!"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 91.0
+margin_top = 513.0
+margin_right = 3091.0
+margin_bottom = 758.0
+theme = ExtResource( 1 )
+text = "They returned to their roots!
+"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 363, 329 )
+scale = Vector2( 0.2, 0.13 )
+texture = ExtResource( 2 )
